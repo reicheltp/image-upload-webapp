@@ -6,6 +6,7 @@ using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.AspNet.Mvc;
+using Microsoft.AspNet.Diagnostics;
 
 namespace FaceWebApp
 {
@@ -21,6 +22,8 @@ namespace FaceWebApp
         {
             // Add the platform handler to the request pipeline.
             app.UseIISPlatformHandler();
+            
+             app.UseDeveloperExceptionPage();
             
             app.UseMvc(routes => {
                 routes.MapRoute(
