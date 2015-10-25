@@ -6,6 +6,11 @@ namespace FaceWebApp.Controllers
 {
 	public class HomeController : Controller
 	{
+		public IActionResult Index()
+		{
+			return Index("cats");
+		}
+		
 		public IActionResult Index(string id)
 		{			
 			ViewData["GalleryName"] = id;
