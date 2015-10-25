@@ -1,0 +1,16 @@
+@{
+	ViewData["Title"] = "Photo Gallery";
+	var images = ViewData["Gallery"] 
+		as System.Collections.Generic.IList<FaceWebApp.Models.ImageUpload>;
+}
+<h1>@ViewData["GalleryName"]</h1>
+
+<ul>
+@foreach(var img in images)
+{
+	<li>
+		<img src="data:image;base64,@img.Image" width="200" /> 
+		<br />@img.Title
+	</li>
+}
+</ul>
