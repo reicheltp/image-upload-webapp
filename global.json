@@ -3,6 +3,8 @@
     "src"
   ],
   "sdk": {
-    "version": "1.0.0-beta8"
+    "version": "1.0.0-beta8",
+    "architecture": "x86",
+    "runtime": "coreclr"
   }
 }
