@@ -22,7 +22,7 @@ namespace FaceWebApp.Controllers
         public IEnumerable<ImageUpload> Get(string galleryId)
         {
             if(!Galleries.ContainsKey(galleryId))
-                return null;
+                return new ImageUpload[0];
             
             return Galleries[galleryId];
         }
